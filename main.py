@@ -15,6 +15,18 @@ logger = logging.getLogger("gridwise.main")
 app = FastAPI(title="GridWise Optimizer")
 
 
+@app.get("/")
+def root():
+    """Root landing endpoint with system status and links."""
+    return {
+        "service": "GridWise Optimizer API",
+        "status": "ok",
+        "health": "/health",
+        "docs": "/docs",
+        "optimize": "POST /optimize-energy",
+    }
+
+
 @app.get("/health")
 def health_check():
     """Health check probe returning HTTP 200 within 60s of startup."""
