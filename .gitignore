@@ -1,0 +1,22 @@
+# Security
+.env
+.env.local
+
+# Meta-Prompts (Do not show judges)
+ARCHITECTURE.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# OS
+.DS_Store
+Thumbs.db
